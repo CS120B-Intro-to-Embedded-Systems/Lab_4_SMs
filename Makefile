@@ -25,11 +25,11 @@ SIMFLAGS=-D_SIMULATE_
 # Place the section past the end of reachable memory
 MMCUSECTION=-Wl,--undefined=_mmcu,--section-start=.mmcu=910000 
 FLAGS=-Wall -mmcu=$(MMCU) $(MMCUSECTION)
-INCLUDES=-I./$(PATHH) -I$(SIMAVRDIR)
+INCLUDES=-I./$(PATomHH) -I$(SIMAVRDIR)
 OBJCOPY=avr-objcopy
 OBJFLAGS=-j .text -j .data -O ihex
 # Debugger
-GDB=/usr/local/Cellar/gdb-9.2/gdb-9.2/gdb
+GDB=/Users/Karsten/gdb-9.2/gdb
 # GDB Testing
 WHILELINENO=$$(grep -n -m 1 "while\s*(1)" source/main.c | cut -f1 -d:)
 GDBCOMMANDS=$(PATHT)commands.gdb
