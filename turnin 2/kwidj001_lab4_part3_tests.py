@@ -24,7 +24,7 @@ tests = [
         ],
     'expected': [('PORTB',<0x00>), ('SM_State', SM_INIT)],
     },
-    #correct passcode entered to unlock
+    #correct passcode entered
     {'description': 'PINA: 0x00 => PORTB: 0x01, SM_State: SM_Y'
     'steps': [ {'inputs': [('PINA',0x01)], 'iterations': 5 },
         {'inputs': [('PINA',0x04)], 'iterations': 5 },
@@ -33,19 +33,6 @@ tests = [
         {'inputs': [('PINA',0x00)], 'iterations': 5 },
         ],
     'expected': [('PORTB',<0x01>), ('SM_State', SM_Y)],
-    },
-    #correct passcode entered to lock
-    {'description': 'PINA: 0x00 => PORTB: 0x01, SM_State: SM_Y'
-    'steps': [ {'inputs': [('PINA',0x01)], 'iterations': 5 },
-        {'inputs': [('PINA',0x04)], 'iterations': 5 },
-        {'inputs': [('PINA',0x00)], 'iterations': 5 },
-        {'inputs': [('PINA',0x02)], 'iterations': 5 },
-        {'inputs': [('PINA',0x00)], 'iterations': 5 }, #door locked
-        {'inputs': [('PINA',0x04)], 'iterations': 5 },
-        {'inputs': [('PINA',0x00)], 'iterations': 5 },
-        {'inputs': [('PINA',0x02)], 'iterations': 5 }, #door unlocked
-        ],
-    'expected': [('PORTB',<0x00>), ('SM_State', SM_Y)],
     },
     #inside button pressed
     {'description': 'PINA: 0x00 => PORTB: 0x01, SM_State: SM_INIT'

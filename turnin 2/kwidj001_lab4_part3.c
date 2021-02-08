@@ -20,7 +20,6 @@
 enum States {SM_START, SM_INIT, SM_Y, SM_PND} SM_State;
 
 unsigned char tmpB = 0x00;//for PORTB
-unsigned char count = 0, passkey[4];
 
 void tick(){ 
     //transitions
@@ -35,15 +34,12 @@ void tick(){
                 SM_State = SM_INIT;
             break;
         case SM_PND:
-            if(count < 4){
-                SM_State = SM_PND;
+            if(button_y){ //if only 'Y' is pressed
+                SM_State = SM_Y;
             }else{
-                if(passkey[0] == 0x04 && passkey[1] == 0x01 && input[2] == 0x02 && input[3] == 0x01){
-                    SM_State = SM_Y;
-                }else{
-                    SM_State = SM_INIT;
-                }
+                SM_State = SM_INIT; //if anything else, lock door (init)
             }
+            break;
         case SM_Y:
             if(button_in){ //if inside button pressed lock the door (init)
                 SM_State = SM_INIT;
@@ -61,19 +57,10 @@ void tick(){
             PORTB = tmpB;
             break;
         case SM_PND:
-            input[count] = tmpA;
-            count++;
             break;
         case SM_Y:
-            if(tmpB == 0x00){
-                tmpB = 0x01; //if locked before unlock 
-            }else if(tmpB == 0x01){
-                tmpB = 0x00; //if unlocked before lock
-            }
+            tmpB = 0x01; //door unlocked;
             PORTB = tmpB;
-            for(count = 0; count < 4; count++){
-                input[count] = 0;
-            }
             break;
         default:
             break;
