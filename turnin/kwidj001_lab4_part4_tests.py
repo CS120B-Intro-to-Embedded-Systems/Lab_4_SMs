@@ -48,25 +48,25 @@ tests = [
     'expected': [('PORTB',0x00), ('SM_State', 'SM_Y')],
     },
     #inside button pressed
-    {'description': 'PINA: 0x00 => PORTB: 0x01, SM_State: SM_INIT'
+    {'description': 'PINA: 0x00 => PORTB: 0x01, SM_State: SM_INIT',
     'steps': [ {'inputs': [('PINA',0x01)], 'iterations': 5 },
         {'inputs': [('PINA',0x04)], 'iterations': 5 },
         {'inputs': [('PINA',0x00)], 'iterations': 5 },
         {'inputs': [('PINA',0x80)], 'iterations': 5},
         ],
-    'expected': [('PORTB',<0x00>), ('SM_State', SM_INIT)],
+    'expected': [('PORTB',0x00), ('SM_State', 'SM_INIT')],
     },
     #all buttons pressed
-    {'description': 'PINA: 0x07 => PORTB: 0x00, SM_State: SM_INIT'
+    {'description': 'PINA: 0x07 => PORTB: 0x00, SM_State: SM_INIT',
     'steps': [ {'inputs': [('PINA',0x01)], 'iterations': 5 },
         {'inputs': [('PINA',0x07)], 'iterations': 5 },
         {'inputs': [('PINA',0x00)], 'iterations': 5 },
         ],
-    'expected': [('PORTB',<0x00>), ('SM_State', SM_INIT)],
+    'expected': [('PORTB',0x00), ('SM_State', 'SM_INIT')],
     },
     ]
 
 # Optionally you can add a set of "watch" variables these need to be global or static and may need
 # to be scoped at the function level (for static variables) if there are naming conflicts. The
 # variables listed here will display everytime you hit (and stop at) a breakpoint
-watch = ['<function>::<static-var>','PORTB']
+# watch = ['<function>::<static-var>','PORTB']

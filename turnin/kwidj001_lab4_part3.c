@@ -1,5 +1,5 @@
 /*	Author: Karsten
- *  Partner(s) Name: 
+ *  Partner(s) Name:
  *	Lab Section:
  *	Assignment: Lab #  Exercise #
  *	Exercise Description: [optional - include for your own benefit]
@@ -9,11 +9,11 @@
  */
 #include <avr/io.h>
 #ifdef _SIMULATE_
-#include "header/simAVRHeader.h"
+#include <simAVRHeader.h>
 #endif
 
 #define button_x (PINA & 0x01) //button_x = PINA & 0x01 (PA0);
-#define button_y (PINA & 0x02) //button_y = PINA & 0x02 (PA1); 
+#define button_y (PINA & 0x02) //button_y = PINA & 0x02 (PA1);
 #define button_pnd (PINA & 0x04) //button_pnd (#) = PINA & 0x04 (PA0 & PA1)
 #define button_in (PINA & 0x80) //button_in (inside house) = PINA & 0x80 (PA7)
 
@@ -21,7 +21,7 @@ enum States {SM_START, SM_INIT, SM_Y, SM_PND} SM_State;
 
 unsigned char tmpB = 0x00;//for PORTB
 
-void tick(){ 
+void tick(){
     //transitions
     switch(SM_State){
         case SM_START:
@@ -52,7 +52,7 @@ void tick(){
     switch(SM_State){
         case SM_START:
             break;
-        case SM_INIT:  
+        case SM_INIT:
             tmpB = 0x00; //door locked
             PORTB = tmpB;
             break;

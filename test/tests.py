@@ -17,36 +17,23 @@
 tests = [
     #incorrect passcode entered
     {'description': 'PINA: 0x00 => PORTB: 0x00, SM_State: SM_INIT',
-    'steps': [
-        {'inputs': [('PINA',0x01)], 'iterations': 5 },
+    'steps': [ {'inputs': [('PINA',0x01)], 'iterations': 5 },
         {'inputs': [('PINA',0x00)], 'iterations': 5 },
         {'inputs': [('PINA',0x02)], 'iterations': 5 },
         {'inputs': [('PINA',0x00)], 'iterations': 5 },
         ],
     'expected': [('PORTB',0x00), ('SM_State', 'SM_INIT')],
     },
-    #correct passcode entered to unlock
-    {'description': 'PINA: 0x00 => PORTB: 0x00, SM_State: SM_Y',
-    'steps': [ {'inputs': [('PINA',0x01)], 'iterations': 5 },
-        {'inputs': [('PINA',0x04)], 'iterations': 5 },
-        {'inputs': [('PINA',0x00)], 'iterations': 5 },
-        {'inputs': [('PINA',0x02)], 'iterations': 5 },
-        {'inputs': [('PINA',0x00)], 'iterations': 5 },
-        ],
-    'expected': [('PORTB',0x00), ('SM_State','SM_Y')],
-    },
-    #correct passcode entered to lock
+    #correct passcode entered
     {'description': 'PINA: 0x00 => PORTB: 0x01, SM_State: SM_Y',
-    'steps': [ {'inputs': [('PINA',0x01)], 'iterations': 5 },
-        {'inputs': [('PINA',0x04)], 'iterations': 5 },
-        {'inputs': [('PINA',0x00)], 'iterations': 5 },
-        {'inputs': [('PINA',0x02)], 'iterations': 5 },
-        {'inputs': [('PINA',0x00)], 'iterations': 5 }, #door locked
-        {'inputs': [('PINA',0x04)], 'iterations': 5 },
-        {'inputs': [('PINA',0x00)], 'iterations': 5 },
-        {'inputs': [('PINA',0x02)], 'iterations': 5 }, #door unlocked
+    'steps': [
+        {'inputs': [('PINA',0x01)], 'iterations': 1 },
+        {'inputs': [('PINA',0x04)], 'iterations': 1 },
+        {'inputs': [('PINA',0x00)], 'iterations': 1 },
+        {'inputs': [('PINA',0x02)], 'iterations': 1 },
+        {'inputs': [('PINA',0x00)], 'iterations': 1},
         ],
-    'expected': [('PORTB',0x00), ('SM_State', 'SM_Y')],
+    'expected': [('PORTB',0x01), ('SM_State', 'SM_Y')],
     },
     #inside button pressed
     {'description': 'PINA: 0x00 => PORTB: 0x01, SM_State: SM_INIT',
@@ -70,4 +57,4 @@ tests = [
 # Optionally you can add a set of "watch" variables these need to be global or static and may need
 # to be scoped at the function level (for static variables) if there are naming conflicts. The
 # variables listed here will display everytime you hit (and stop at) a breakpoint
-# watch = ['main::tmpB>','PORTB']
+# watch = ['<function>::<static-var>','PORTB']

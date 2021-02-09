@@ -39,3 +39,303 @@ Test 5: "PINA: 0x07 => PORTB: 0x00, SM_State: SM_INIT"...passed
 ==================================================
 Passed 5/5 tests. Skipped 0 tests.
 ==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_LED0"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTB: 0x02, SM_State: SM_LED1"...passed
+==================================================
+Test 3: "PINA: 0x01 => PORTB: 0x02, SM_State: SM_LED1"...failed.
+	Expected PORTB := 2 but got 1 '\001'
+==================================================
+Passed 2/3 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_LED0"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTB: 0x02, SM_State: SM_LED1"...passed
+==================================================
+Test 3: "PINA: 0x01 => PORTB: 0x02, SM_State: SM_LED1"...failed.
+	Expected PORTB := 2 but got 1 '\001'
+==================================================
+Passed 2/3 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_LED0"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTB: 0x02, SM_State: SM_LED1"...passed
+==================================================
+Test 3: "PINA: 0x01 => PORTB: 0x02, SM_State: SM_LED1"...failed.
+	Expected PORTB := 2 but got 1 '\001'
+==================================================
+Passed 2/3 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_LED0"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTB: 0x02, SM_State: SM_LED1"...passed
+==================================================
+Test 3: "PINA: 0x01 => PORTB: 0x02, SM_State: SM_LED1"...passed
+==================================================
+Passed 3/3 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...failed.
+	Expected PORTC := 1 but got 7 '\a'
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...failed.
+	Expected PORTC := 8 but got 6 '\006'
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...failed.
+	Expected PORTC := 6 but got 0 '\000'
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 1/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...failed.
+	Expected PORTC := 1 but got 7 '\a'
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...failed.
+	Expected PORTC := 8 but got 6 '\006'
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...failed.
+	Expected PORTC := 6 but got 0 '\000'
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 1/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...failed.
+	Expected PORTC := 8 but got 1 '\001'
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...failed.
+	Expected PORTC := 6 but got 0 '\000'
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 2/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...failed.
+	Expected PORTC := 6 but got 0 '\000'
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 3/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...passed
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 3 '\003'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 7 '\a'
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 4/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...passed
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 8 '\b'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...failed.
+	Expected PORTC := 0 but got 1 '\001'
+==================================================
+Passed 3/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...passed
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 8 '\b'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 9 '\t'
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 4/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...passed
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 8 '\b'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...passed
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 5/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...passed
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 7 '\a'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...passed
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 5/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...passed
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 7 '\a'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...passed
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 5/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...passed
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 8 '\b'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...passed
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 5/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC"...passed
+==================================================
+Test 3: "PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC"...passed
+==================================================
+Test 4: "PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET"...failed.
+	Expected PORTC := 0 but got 8 '\b'
+==================================================
+Test 5: "PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET"...passed
+==================================================
+Test 6: "PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC"...passed
+==================================================
+Passed 5/6 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTB: 0x00, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_Y"...failed.
+	Expected PORTB := 1 but got 0 '\000'
+==================================================
+Test 3: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_INIT"...passed
+==================================================
+Test 4: "PINA: 0x07 => PORTB: 0x00, SM_State: SM_INIT"...failed.
+	Expected PORTB := 0 but got 1 '\001'
+==================================================
+Passed 2/4 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTB: 0x00, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_Y"...failed.
+	Expected PORTB := 1 but got 0 '\000'
+==================================================
+Test 3: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_INIT"...passed
+==================================================
+Test 4: "PINA: 0x07 => PORTB: 0x00, SM_State: SM_INIT"...failed.
+	Expected PORTB := 0 but got 1 '\001'
+==================================================
+Passed 2/4 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTB: 0x00, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_Y"...failed.
+	Expected PORTB := 1 but got 0 '\000'
+==================================================
+Test 3: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_INIT"...passed
+==================================================
+Test 4: "PINA: 0x07 => PORTB: 0x00, SM_State: SM_INIT"...failed.
+	Expected PORTB := 0 but got 1 '\001'
+==================================================
+Passed 2/4 tests. Skipped 0 tests.
+==================================================
+==================================================
+Test 1: "PINA: 0x00 => PORTB: 0x00, SM_State: SM_INIT"...passed
+==================================================
+Test 2: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_Y"...failed.
+	Expected PORTB := 1 but got 0 '\000'
+==================================================
+Test 3: "PINA: 0x00 => PORTB: 0x01, SM_State: SM_INIT"...passed
+==================================================
+Test 4: "PINA: 0x07 => PORTB: 0x00, SM_State: SM_INIT"...failed.
+	Expected PORTB := 0 but got 1 '\001'
+==================================================
+Passed 2/4 tests. Skipped 0 tests.
+==================================================

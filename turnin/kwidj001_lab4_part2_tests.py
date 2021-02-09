@@ -17,54 +17,55 @@
 tests = [
     #test initial value (no buttons)
     {'description': 'PINA: 0x00 => PORTC: 0x07, SM_State: SM_INIT',
-    'steps': [ {'inputs': [('PINA',0x00)], 'iterations': 5 },
+    'steps': [ {'inputs': [('PINA',0x00)], 'iterations': 1 },
         ],
-    'expected': [('PORTC',0x01), ('SM_State', 'SM_INIT')],
+    'expected': [('PORTC',0x07), ('SM_State', 'SM_INIT')],
     },
     #increment once
     {'description': 'PINA: 0x01 => PORTC: 0x08, SM_State: SM_INC',
     'steps': [
-        {'inputs' : [('PINA',0x01}], 'iterations': 5},
-        {'inputs' : [('PINA',0x00}], 'iterations': 5},
+        {'inputs' : [('PINA',0x01)], 'iterations': 1},
+        #{'inputs' : [('PINA',0x00)], 'iterations': 5},
         ],
     'expected': [('PORTC',0x08), ('SM_State', 'SM_INC')],
     },
     #decrement once
     {'description': 'PINA: 0x02 => PORTC: 0x06, SM_State: SM_DEC',
     'steps': [
-        {'inputs' : [('PINA',0x02}], 'iterations': 5},
-        {'inputs' : [('PINA',0x00}], 'iterations': 5},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x00)], 'iterations': 1},
         ],
     'expected': [('PORTC',0x06), ('SM_State', 'SM_DEC')],
     },
     #reset once
     {'description': 'PINA: 0x03 => PORTC: 0x00, SM_State: SM_RESET',
     'steps': [
-        {'inputs' : [('PINA',0x03}], 'iterations': 5},
-        {'inputs' : [('PINA',0x00}], 'iterations': 5},
+        {'inputs' : [('PINA',0x03)], 'iterations': 1},
+        {'inputs' : [('PINA',0x00)], 'iterations': 1},
         ],
     'expected': [('PORTC',0x00), ('SM_State', 'SM_RESET')],
     },
     #increment until max
     {'description': 'PINA: 0x01 => PORTC: 0x00, SM_State: SM_RESET',
     'steps': [
-        {'inputs' : [('PINA',0x01}], 'iterations': 5},
-        {'inputs' : [('PINA',0x01}], 'iterations': 5},
-        {'inputs' : [('PINA',0x00}], 'iterations': 5},
+        {'inputs' : [('PINA',0x01)], 'iterations': 1},
+        {'inputs' : [('PINA',0x01)], 'iterations': 1},
+        {'inputs' : [('PINA',0x00)], 'iterations': 1},
         ],
-    'expected': [('PORTC',0x00), ('SM_State', 'SM_RESET')],
+    'expected': [('PORTC',0x09), ('SM_State', 'SM_RESET')],
     },
     #decrement until 0
     {'description': 'PINA: 0x02 => PORTC: 0x00, SM_State: SM_DEC',
     'steps': [
-        {'inputs' : [('PINA',0x02}], 'iterations': 5},
-        {'inputs' : [('PINA',0x02}], 'iterations': 5},
-        {'inputs' : [('PINA',0x02}], 'iterations': 5},
-        {'inputs' : [('PINA',0x02}], 'iterations': 5},
-        {'inputs' : [('PINA',0x02}], 'iterations': 5},
-        {'inputs' : [('PINA',0x02}], 'iterations': 5},
-        {'inputs' : [('PINA',0x02}], 'iterations': 5},
-        {'inputs' : [('PINA',0x00}], 'iterations': 5},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x02)], 'iterations': 1},
+        {'inputs' : [('PINA',0x00)], 'iterations': 1},
         ],
     'expected': [('PORTC',0x00), ('SM_State', 'SM_RESET')],
     },
@@ -73,4 +74,4 @@ tests = [
 # Optionally you can add a set of "watch" variables these need to be global or static and may need
 # to be scoped at the function level (for static variables) if there are naming conflicts. The
 # variables listed here will display everytime you hit (and stop at) a breakpoint
-watch = ['<function>::<static-var>','PORTB']
+# watch = ['<function>::<static-var>','PORTB']

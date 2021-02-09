@@ -1,5 +1,5 @@
 /*	Author: Karsten
- *  Partner(s) Name: 
+ *  Partner(s) Name:
  *	Lab Section:
  *	Assignment: Lab #  Exercise #
  *	Exercise Description: [optional - include for your own benefit]
@@ -9,18 +9,18 @@
  */
 #include <avr/io.h>
 #ifdef _SIMULATE_
-#include "header/simAVRHeader.h"
+#include <simAVRHeader.h>
 #endif
 
 #define button_inc (PINA & 0x01) //button_inc = PINA & 0x01 (PA0);
-#define button_dec (PINA & 0x02) //button_dec = PINA & 0x02 (PA1); 
+#define button_dec (PINA & 0x02) //button_dec = PINA & 0x02 (PA1);
 #define button_reset (PINA & 0x03) //button_reset = PINA & 0x03 (PA0 & PA1)
 
 enum States {SM_START, SM_INIT, SM_INC, SM_DEC, SM_RESET, SM_STOP} SM_State;
 
 unsigned char tmpC = 0x00;//for PORTC
 
-void tick(){ 
+void tick(){
     //transitions
     switch(SM_State){
         case SM_START:
@@ -43,7 +43,7 @@ void tick(){
             }else if (button_reset){
                 SM_State = SM_RESET;
             }
-            if(tmpC = 0x09){
+            if(tmpC == 0x09){
                 SM_State = SM_STOP;
             }
             break;
@@ -55,7 +55,7 @@ void tick(){
             }else if (button_reset){
                 SM_State = SM_RESET;
             }
-            if(tmpC = 0x00){
+            if(tmpC == 0x00){
                 break;
             }
             break;
@@ -76,14 +76,14 @@ void tick(){
     }
     //state actions
     switch(SM_State){
-        case SM_Start:
+        case SM_START:
             break;
         case SM_INIT:
             tmpC = 0x07; //start with C = 0x07
             PORTC = tmpC;
             break;
         case SM_INC:
-            tmpC += 0x01;
+            tmpC = tmpC + 0x01;
             PORTC = tmpC;
             break;
         case SM_DEC:
@@ -108,7 +108,7 @@ int main(void) {
     DDRC = 0xFF; PORTC = 0x00;
 
     /* Insert your solution below */
-    SM_State = SM_Start;
+    SM_State = SM_START;
     while (1) {
         tick();
     }
